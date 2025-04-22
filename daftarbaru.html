@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Baru - Coding Yuk</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #007bff;
+      color: white;
+    }
+
+    .container {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      font-size: 1em;
+    }
+
+    form {
+      display: inline-block;
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    input[type="text"], input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #0056b3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    button:hover {
+      background-color: #003f7f;
+    }
+
+    .links {
+      margin-top: 15px;
+    }
+
+    .links a {
+      color: white;
+      text-decoration: underline;
+      margin: 0 10px;
+      font-size: 0.9em;
+    }
+
+    .links a:hover {
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+
+    .success {
+      color: green;
+      margin-top: 10px;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    .success img {
+      width: 20px;
+      margin-bottom: 15px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Daftar Akun Baru</h1>
+    <p>Silahkan isi form di bawah untuk mendaftar</p>
+    <form onsubmit="handleRegister(event)">
+      <input type="text" id="fullname" placeholder="Nama Lengkap" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <input type="password" id="confirmPassword" placeholder="Konfirmasi Password" required>
+      <button type="submit">Daftar</button>
+      <p id="error-message" class="error"></p>
+      <p id="success-message" class="success"></p>
+    </form>
+    <div class="links">
+      <a href="login.html">Kembali ke Login</a>
+    </div>
+  </div>
+
+  <script>
+    function handleRegister(event) {
+      event.preventDefault();
+
+      const fullname = document.getElementById("fullname").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+
+      const errorMessage = document.getElementById("error-message");
+      const successMessage = document.getElementById("success-message");
+
+      // Reset error and success messages
+      errorMessage.textContent = "";
+      successMessage.textContent = "";
+
+      // Validasi password dan konfirmasi password
+      if (password !== confirmPassword) {
+        errorMessage.textContent = "Password dan konfirmasi password tidak cocok!";
+        return;
+      }
+
+      // Proses registrasi berhasil
+      successMessage.innerHTML = ' Berhasil mendaftar, silakan login kembali.';
+    }
+  </script>
+</body>
+</html>

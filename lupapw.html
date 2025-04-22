@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lupa Password - Coding Yuk</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #007bff;
+      color: white;
+    }
+
+    .container {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      font-size: 1em;
+    }
+
+    form {
+      display: inline-block;
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #0056b3;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    button:hover {
+      background-color: #003f7f;
+    }
+
+    .links {
+      margin-top: 15px;
+    }
+
+    .links a {
+      color: white;
+      text-decoration: underline;
+      margin: 0 10px;
+      font-size: 0.9em;
+    }
+
+    .links a:hover {
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+
+    .success {
+      color: green;
+      margin-top: 10px;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Lupa Password</h1>
+    <p>Silahkan masukkan email Anda untuk menerima instruksi reset password</p>
+    <form onsubmit="handleResetPassword(event)">
+      <input type="email" id="email" placeholder="Email" required>
+      <button type="submit">Kirim Instruksi Reset</button>
+      <p id="error-message" class="error"></p>
+      <p id="success-message" class="success"></p>
+    </form>
+    <div class="links">
+      <a href="login.html">Kembali ke Login</a>
+    </div>
+  </div>
+
+  <script>
+    function handleResetPassword(event) {
+      event.preventDefault();
+
+      const email = document.getElementById("email").value;
+
+      const errorMessage = document.getElementById("error-message");
+      const successMessage = document.getElementById("success-message");
+
+      
+      errorMessage.textContent = "";
+      successMessage.textContent = "";
+
+     
+      if (email === "") {
+        errorMessage.textContent = "Harap masukkan email yang valid.";
+        return;
+      }
+
+      
+      successMessage.textContent = "Instruksi reset password telah dikirim ke email Anda.";
+    }
+  </script>
+</body>
+</html>

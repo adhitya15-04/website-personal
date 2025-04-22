@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Activity - Coding Yuk</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #007bff;
+      color: white;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #0056b3;
+    }
+
+    .header .logo img {
+      height: 50px; 
+    }
+
+    .header nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1em;
+    }
+
+    .header nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container h1 {
+      margin-bottom: 30px;
+    }
+
+    .activity-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .activity-item {
+      background-color: #0056b3;
+      padding: 15px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .activity-item img {
+      width: 100%;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 0.8);
+      border: none;
+      border-radius: 50%;
+      padding: 15px;
+      cursor: pointer;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    .activity-item:hover .play-button {
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+    .activity-item p {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      
+      <img src="lggo.png" alt="Logo Coding Yuk">
+    </div>
+    <nav>
+      <a href="web.html">Home</a>
+      <a href="ouractivity.html">Our Activity</a>
+      <a href="contact.html" class="active">Contact us</a>
+    </nav>
+  </div>
+
+  <div class="container">
+    <h1>Our Activity</h1>
+    <div class="activity-container">
+     
+      <div class="activity-item">
+        <div style="position: relative;">
+          <img src="66.jpg" alt="Kegiatan 1">
+          <button class="play-button">▶</button>
+        </div>
+        <p>Pengenalan bahasa pemrograman pada SD</p>
+      </div>
+
+      
+      <div class="activity-item">
+        <div style="position: relative;">
+          <img src="RR.jpg" alt="Kegiatan 2">
+          <button class="play-button">▶</button>
+        </div>
+        <p>Pembahasan topik struktural web programming</p>
+      </div>
+
+    
+      <div class="activity-item">
+        <div style="position: relative;">
+          <img src="y.jpeg.jpg" alt="Kegiatan 3">
+          <button class="play-button">▶</button>
+        </div>
+        <p>Pelatihan akhir mahasiswa dalam pengembangan aplikasi</p>
+      </div>
+
+   
+      <div class="activity-item">
+        <div style="position: relative;">
+          <img src="tte.webp" alt="Kegiatan 4">
+          <button class="play-button">▶</button>
+        </div>
+        <p>Pertemuan Zoom Meeting Les Private</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

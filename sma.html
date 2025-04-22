@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pembelajaran Sekolah Menengah Atas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #007bff;
+      color: white;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #0056b3;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    .lessons {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .lesson {
+      background: linear-gradient(to bottom, #ff6600, #cc5200);
+      padding: 15px;
+      border-radius: 10px;
+      position: relative;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      text-align: left;
+      color: white;
+    }
+
+    .lesson.locked {
+      position: relative;
+    }
+
+    .lesson.locked:before {
+      content: "\1F512"; 
+      font-size: 50px;
+      color: blue;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+
+    .lesson.locked .content {
+      opacity: 0.5;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .cloud {
+      margin-top: 30px;
+      background-color: white;
+      color: black;
+      padding: 15px 20px;
+      border-radius: 20px;
+      display: inline-block;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      font-size: 0.9em;
+    }
+
+    .logo img {
+      height: 50px; 
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="logo">
+      
+      <img src="lggo.png" alt="Logo Coding Yuk">
+    </div>
+    <div>
+      <a href="web.html">Home</a>
+      <a href="ouractivity.html">Our Activity</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </div>
+  <div class="container">
+    <h1>PEMBELAJARAN SEKOLAH MENENGAH ATAS</h1>
+    <div class="lessons">
+      <div class="lesson">
+        <div class="content">
+          <p><strong>Mengenal Dunia Coding dengan Scratch</strong></p>
+          <p>BAB 1</p>
+        </div>
+      </div>
+      <div class="lesson">
+        <div class="content">
+          <p><strong>Belajar Membuat Game Sederhana</strong></p>
+          <p>BAB 2</p>
+        </div>
+      </div>
+      <div class="lesson locked">
+        <div class="content">
+          <p><strong>Animasi untuk Pemula</strong></p>
+          <p>BAB 3</p>
+        </div>
+      </div>
+      <div class="lesson locked">
+        <div class="content">
+          <p><strong>Dasar Logika Pemrograman</strong></p>
+          <p>BAB 4</p>
+        </div>
+      </div>
+      <div class="lesson locked">
+        <div class="content">
+          <p><strong>Petualangan Coding</strong></p>
+          <p>BAB 5</p>
+        </div>
+      </div>
+    </div>
+    <div class="cloud">
+      Berlangganan dahulu untuk membuka fitur yang terkunci
+    </div>
+  </div>
+</body>
+</html>
